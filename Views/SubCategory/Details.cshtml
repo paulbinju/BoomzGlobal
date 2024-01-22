@@ -1,0 +1,36 @@
+﻿@model BoomzGlobal.Models.SubCategory_T
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SubCategory_T</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategoryID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategoryID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category_T.Category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category_T.Category)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategory)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategory)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

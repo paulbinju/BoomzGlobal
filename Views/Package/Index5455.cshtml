@@ -1,0 +1,57 @@
+﻿@model IEnumerable<BoomzGlobal.Models.Package_T>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PackageID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Franchise_T.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City_T.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Package)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PackageID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Franchise_T.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City_T.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Package)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

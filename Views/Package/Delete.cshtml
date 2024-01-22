@@ -1,0 +1,54 @@
+﻿@model BoomzGlobal.Models.Package_T
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Package_T</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PackageID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PackageID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Franchise_T.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Franchise_T.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City_T.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City_T.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Package)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Package)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DOC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DOC)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

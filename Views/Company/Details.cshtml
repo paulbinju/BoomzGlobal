@@ -1,0 +1,162 @@
+﻿@model BoomzGlobal.Models.Company_T
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Company_T</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country_T.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country_T.Country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City_T.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City_T.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category_T.Category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category_T.Category)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubCategory_T.SubCategory)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubCategory_T.SubCategory)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telephone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telephone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Website)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Website)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Building)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Building)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Road)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Road)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Location)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductService)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductService)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Profile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Profile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Facebook)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Facebook)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Twitter)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Twitter)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Linkedin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Linkedin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gplus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gplus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Youtube)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Youtube)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DOC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DOC)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

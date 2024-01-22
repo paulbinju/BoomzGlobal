@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BoomzGlobalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Advertisement_T">
+    <Key>
+      <PropertyRef Name="Advertisement_T" />
+    </Key>
+    <Property Name="Advertisement_T" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="250" />
+    <Property Name="StartDate" Type="smalldatetime" />
+    <Property Name="EndDate" Type="smalldatetime" />
+    <Property Name="DOC" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Category_T">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="City_T">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="City" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Company_T">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="SubCategoryID" Type="int" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="Password" Type="nvarchar" MaxLength="10" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="250" />
+    <Property Name="Website" Type="nvarchar" MaxLength="150" />
+    <Property Name="Building" Type="nvarchar" MaxLength="50" />
+    <Property Name="Road" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductService" Type="ntext" />
+    <Property Name="Profile" Type="ntext" />
+    <Property Name="Facebook" Type="nvarchar" MaxLength="150" />
+    <Property Name="Twitter" Type="nvarchar" MaxLength="150" />
+    <Property Name="Linkedin" Type="nvarchar" MaxLength="150" />
+    <Property Name="Gplus" Type="nvarchar" MaxLength="150" />
+    <Property Name="Youtube" Type="nvarchar" MaxLength="150" />
+    <Property Name="DOC" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Company-Package_T">
+    <Key>
+      <PropertyRef Name="CompanyPackageID" />
+    </Key>
+    <Property Name="CompanyPackageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="PackageID" Type="int" />
+    <Property Name="FranchiseID" Type="int" />
+    <Property Name="StartDate" Type="smalldatetime" />
+    <Property Name="EndDate" Type="smalldatetime" />
+    <Property Name="Discount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ReceiptAmount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Paid" Type="bit" />
+    <Property Name="DOC" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Country_T">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Franchise_T">
+    <Key>
+      <PropertyRef Name="FranchiseID" />
+    </Key>
+    <Property Name="FranchiseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="FranchiseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="10" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactPerson1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactPerson2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email2" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOC" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Package_T">
+    <Key>
+      <PropertyRef Name="PackageID" />
+    </Key>
+    <Property Name="PackageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FranchiseID" Type="int" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="Package" Type="nvarchar" MaxLength="150" />
+    <Property Name="DOC" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="SubCategory_T">
+    <Key>
+      <PropertyRef Name="SubCategoryID" />
+    </Key>
+    <Property Name="SubCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="SubCategory" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Advertisement_T_Company_T">
+    <End Role="Company_T" Type="Self.Company_T" Multiplicity="0..1" />
+    <End Role="Advertisement_T" Type="Self.Advertisement_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company_T">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Advertisement_T">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_T_Country_T">
+    <End Role="Country_T" Type="Self.Country_T" Multiplicity="0..1" />
+    <End Role="City_T" Type="Self.City_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_T">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="City_T">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_T_Category_T">
+    <End Role="Category_T" Type="Self.Category_T" Multiplicity="0..1" />
+    <End Role="Company_T" Type="Self.Company_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category_T">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Company_T">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_T_City_T">
+    <End Role="City_T" Type="Self.City_T" Multiplicity="0..1" />
+    <End Role="Company_T" Type="Self.Company_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City_T">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Company_T">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_T_Country_T">
+    <End Role="Country_T" Type="Self.Country_T" Multiplicity="0..1" />
+    <End Role="Company_T" Type="Self.Company_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_T">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="Company_T">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company_T_SubCategory_T">
+    <End Role="SubCategory_T" Type="Self.SubCategory_T" Multiplicity="0..1" />
+    <End Role="Company_T" Type="Self.Company_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategory_T">
+        <PropertyRef Name="SubCategoryID" />
+      </Principal>
+      <Dependent Role="Company_T">
+        <PropertyRef Name="SubCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company-Package_T_Company_T1">
+    <End Role="Company_T" Type="Self.Company_T" Multiplicity="0..1" />
+    <End Role="Company-Package_T" Type="Self.Company-Package_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company_T">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Company-Package_T">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company-Package_T_Franchise_T1">
+    <End Role="Franchise_T" Type="Self.Franchise_T" Multiplicity="0..1" />
+    <End Role="Company-Package_T" Type="Self.Company-Package_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Franchise_T">
+        <PropertyRef Name="FranchiseID" />
+      </Principal>
+      <Dependent Role="Company-Package_T">
+        <PropertyRef Name="FranchiseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Company-Package_T_Package_T">
+    <End Role="Package_T" Type="Self.Package_T" Multiplicity="0..1" />
+    <End Role="Company-Package_T" Type="Self.Company-Package_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Package_T">
+        <PropertyRef Name="PackageID" />
+      </Principal>
+      <Dependent Role="Company-Package_T">
+        <PropertyRef Name="PackageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Franchise_T_City_T">
+    <End Role="City_T" Type="Self.City_T" Multiplicity="0..1" />
+    <End Role="Franchise_T" Type="Self.Franchise_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City_T">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Franchise_T">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Franchise_T_Country_T">
+    <End Role="Country_T" Type="Self.Country_T" Multiplicity="0..1" />
+    <End Role="Franchise_T" Type="Self.Franchise_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country_T">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="Franchise_T">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Package_T_City_T">
+    <End Role="City_T" Type="Self.City_T" Multiplicity="0..1" />
+    <End Role="Package_T" Type="Self.Package_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City_T">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Package_T">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Package_T_Franchise_T1">
+    <End Role="Franchise_T" Type="Self.Franchise_T" Multiplicity="0..1" />
+    <End Role="Package_T" Type="Self.Package_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Franchise_T">
+        <PropertyRef Name="FranchiseID" />
+      </Principal>
+      <Dependent Role="Package_T">
+        <PropertyRef Name="FranchiseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubCategory_T_Category_T">
+    <End Role="Category_T" Type="Self.Category_T" Multiplicity="0..1" />
+    <End Role="SubCategory_T" Type="Self.SubCategory_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category_T">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="SubCategory_T">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BoomzGlobalModelStoreContainer">
+    <EntitySet Name="Advertisement_T" EntityType="Self.Advertisement_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category_T" EntityType="Self.Category_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City_T" EntityType="Self.City_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company_T" EntityType="Self.Company_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company-Package_T" EntityType="Self.Company-Package_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country_T" EntityType="Self.Country_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Franchise_T" EntityType="Self.Franchise_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Package_T" EntityType="Self.Package_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubCategory_T" EntityType="Self.SubCategory_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Advertisement_T_Company_T" Association="Self.FK_Advertisement_T_Company_T">
+      <End Role="Company_T" EntitySet="Company_T" />
+      <End Role="Advertisement_T" EntitySet="Advertisement_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_T_Country_T" Association="Self.FK_City_T_Country_T">
+      <End Role="Country_T" EntitySet="Country_T" />
+      <End Role="City_T" EntitySet="City_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_T_Category_T" Association="Self.FK_Company_T_Category_T">
+      <End Role="Category_T" EntitySet="Category_T" />
+      <End Role="Company_T" EntitySet="Company_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_T_City_T" Association="Self.FK_Company_T_City_T">
+      <End Role="City_T" EntitySet="City_T" />
+      <End Role="Company_T" EntitySet="Company_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_T_Country_T" Association="Self.FK_Company_T_Country_T">
+      <End Role="Country_T" EntitySet="Country_T" />
+      <End Role="Company_T" EntitySet="Company_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company_T_SubCategory_T" Association="Self.FK_Company_T_SubCategory_T">
+      <End Role="SubCategory_T" EntitySet="SubCategory_T" />
+      <End Role="Company_T" EntitySet="Company_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company-Package_T_Company_T1" Association="Self.FK_Company-Package_T_Company_T1">
+      <End Role="Company_T" EntitySet="Company_T" />
+      <End Role="Company-Package_T" EntitySet="Company-Package_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company-Package_T_Franchise_T1" Association="Self.FK_Company-Package_T_Franchise_T1">
+      <End Role="Franchise_T" EntitySet="Franchise_T" />
+      <End Role="Company-Package_T" EntitySet="Company-Package_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Company-Package_T_Package_T" Association="Self.FK_Company-Package_T_Package_T">
+      <End Role="Package_T" EntitySet="Package_T" />
+      <End Role="Company-Package_T" EntitySet="Company-Package_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Franchise_T_City_T" Association="Self.FK_Franchise_T_City_T">
+      <End Role="City_T" EntitySet="City_T" />
+      <End Role="Franchise_T" EntitySet="Franchise_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Franchise_T_Country_T" Association="Self.FK_Franchise_T_Country_T">
+      <End Role="Country_T" EntitySet="Country_T" />
+      <End Role="Franchise_T" EntitySet="Franchise_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Package_T_City_T" Association="Self.FK_Package_T_City_T">
+      <End Role="City_T" EntitySet="City_T" />
+      <End Role="Package_T" EntitySet="Package_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Package_T_Franchise_T1" Association="Self.FK_Package_T_Franchise_T1">
+      <End Role="Franchise_T" EntitySet="Franchise_T" />
+      <End Role="Package_T" EntitySet="Package_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubCategory_T_Category_T" Association="Self.FK_SubCategory_T_Category_T">
+      <End Role="Category_T" EntitySet="Category_T" />
+      <End Role="SubCategory_T" EntitySet="SubCategory_T" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,117 @@
+﻿@model IEnumerable<BoomzGlobal.Models.Franchise_T>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FranchiseID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country_T.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City_T.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FranchiseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPerson1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPerson2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FranchiseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country_T.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City_T.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FranchiseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactPerson1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactPerson2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

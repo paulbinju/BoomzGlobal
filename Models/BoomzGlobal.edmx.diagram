@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c49401d0b9ed448aad9ad59345f981b1" Name="Diagram1">
+        <EntityTypeShape EntityType="BoomzGlobalModel.Advertisement_T" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.Category_T" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.City_T" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.Company_T" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.Company_Package_T" Width="1.5" PointX="12.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.Country_T" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.Franchise_T" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.Package_T" Width="1.5" PointX="10.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.SubCategory_T" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoomzGlobalModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Advertisement_T_Company_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_T_Category_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_SubCategory_T_Category_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_City_T_Country_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_T_City_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Franchise_T_City_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Package_T_City_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_T_Country_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_T_SubCategory_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_Package_T_Company_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_Package_T_Franchise_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Company_Package_T_Package_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Franchise_T_Country_T" ManuallyRouted="false" />
+        <AssociationConnector Association="BoomzGlobalModel.FK_Package_T_Franchise_T1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

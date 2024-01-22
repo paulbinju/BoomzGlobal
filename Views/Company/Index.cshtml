@@ -1,0 +1,153 @@
+﻿@model IEnumerable<BoomzGlobal.Models.Company_T>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country_T.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City_T.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_T.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCategory_T.SubCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Building)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Road)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductService)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Facebook)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Twitter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Linkedin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gplus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Youtube)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country_T.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City_T.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category_T.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCategory_T.SubCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Building)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Road)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductService)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Facebook)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Twitter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Linkedin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gplus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Youtube)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

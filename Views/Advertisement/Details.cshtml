@@ -1,0 +1,71 @@
+﻿@model BoomzGlobal.Models.Advertisement_T
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Advertisement_T</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Advertisement_T1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Advertisement_T1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Company_T.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Company_T.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ImageName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ImageName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DOC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DOC)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

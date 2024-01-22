@@ -1,0 +1,67 @@
+﻿<div id="sidebar" class="nav-collapse ">
+    <!-- sidebar menu start-->
+    <ul class="sidebar-menu" id="nav-accordion">
+        <li>
+            <a href="@Url.Content("~/")">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Home</span>
+            </a>
+        </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;">
+                <i class="fa fa-list"></i>
+                <span>Orders</span>
+
+            </a>
+            <ul class="sub">
+                <li><a href="@Url.Content("~/Order/New")"><i class="fa fa-list"></i> New</a></li>
+                <li><a href="@Url.Content("~/Order/Processing")"><i class="fa fa-list"></i> Processing</a></li>
+                <li><a href="@Url.Content("~/Order/Completed")"><i class="fa fa-list"></i> Completed</a></li>
+                <li><a href="@Url.Content("~/Order/Failed")"><i class="fa fa-list"></i> Failed</a></li>
+
+            </ul>
+
+        </li>
+
+        <li class="sub-menu">
+            <a href="@Url.Content("~/Customer")">
+                <i class="fa fa-user"></i>
+                <span>Customers</span>
+            </a>
+
+        </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;">
+                <i class="fa fa-book"></i>
+                <span>Franchise</span>
+            </a>
+            <ul class="sub">
+                <li><a href="@Url.Content("~/Franchise")"><i class="fa fa-cogs"></i> Create Franchise</a></li>
+                <li><a href="@Url.Content("~/Package")"><i class="fa fa-cogs"></i> Assign Package</a></li>
+            </ul>
+        </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;">
+                <i class="fa fa-book"></i>
+                <span>Master</span>
+            </a>
+            <ul class="sub">
+                <li><a href="@Url.Content("~/Country")"><i class="fa fa-truck"></i> Country</a></li>
+                <li><a href="@Url.Content("~/City")"><i class="fa fa-cutlery"></i> City</a></li>
+                <li><a href="@Url.Content("~/Category")"><i class="fa fa-cogs"></i> Category</a></li>
+                <li><a href="@Url.Content("~/SubCategory")"><i class="fa fa-cogs"></i> SubCategory</a></li>
+ 
+           
+
+
+        
+
+            </ul>
+        </li>
+
+    </ul>
+    <!-- sidebar menu end-->
+</div>

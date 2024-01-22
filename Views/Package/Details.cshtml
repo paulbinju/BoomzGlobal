@@ -1,0 +1,50 @@
+﻿@model BoomzGlobal.Models.Package_T
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Package_T</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PackageID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PackageID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Franchise_T.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Franchise_T.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City_T.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City_T.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Package)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Package)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DOC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DOC)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

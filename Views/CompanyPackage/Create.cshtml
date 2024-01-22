@@ -1,0 +1,116 @@
+﻿@model BoomzGlobal.Models.Company_Package_T
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Company_Package_T</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyPackageID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyPackageID)
+            @Html.ValidationMessageFor(model => model.CompanyPackageID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyID, "Company_T")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CompanyID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CompanyID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PackageID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PackageID)
+            @Html.ValidationMessageFor(model => model.PackageID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FranchiseID, "Franchise_T")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("FranchiseID", String.Empty)
+            @Html.ValidationMessageFor(model => model.FranchiseID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartDate)
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EndDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EndDate)
+            @Html.ValidationMessageFor(model => model.EndDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Discount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Discount)
+            @Html.ValidationMessageFor(model => model.Discount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ReceiptAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ReceiptAmount)
+            @Html.ValidationMessageFor(model => model.ReceiptAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Active)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Active)
+            @Html.ValidationMessageFor(model => model.Active)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Paid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Paid)
+            @Html.ValidationMessageFor(model => model.Paid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DOC)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DOC)
+            @Html.ValidationMessageFor(model => model.DOC)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

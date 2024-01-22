@@ -1,0 +1,120 @@
+﻿@model BoomzGlobal.Models.Franchise_T
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Franchise_T</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FranchiseID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FranchiseID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country_T.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country_T.Country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City_T.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City_T.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FranchiseName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FranchiseName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telephone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telephone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Website)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Website)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactPerson1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactPerson1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mobile1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactPerson2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactPerson2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mobile2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DOC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DOC)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
